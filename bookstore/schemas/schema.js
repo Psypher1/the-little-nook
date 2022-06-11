@@ -5,6 +5,7 @@ import author from "./author";
 import genre from "./genre";
 import book from "./book";
 import series from "./series";
+import request from "./request";
 
 // Then import schema types from any plugins that might expose them
 import schemaTypes from "all:part:@sanity/base/schema-type";
@@ -21,6 +22,7 @@ export default createSchema({
     book,
     genre,
     series,
+    request,
     // book,
   ]),
 });
