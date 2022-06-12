@@ -30,7 +30,7 @@ const Request = () => {
     <>
       <h1 className="text-2xl mb-5 text-center">Request</h1>
       {submitted ? (
-        <div className="bg-slate-700 text-slate-100 p-6 text-center rounded-md">
+        <div className="bg-teal-700 text-teal-100 p-6 text-center rounded-md">
           <h2 className="text-2xl font-semibold mb-4">Request Sent!</h2>
           <p className="italic">
             Check back soon, hopefully we'll have your book
@@ -67,7 +67,7 @@ const Request = () => {
 
           <button
             type="submit"
-            className="bg-slate-900 hover:bg-slate-800 text-slate-100 p-4"
+            className="bg-teal-900 hover:bg-teal-800 text-teal-100 p-4"
           >
             Request
           </button>

@@ -2,9 +2,9 @@ import Link from "next/link";
 const SiteLayout = ({ children }) => {
   return (
     <>
-      <nav className="flex items-center bg-slate-800 text-slate-300 gap-4 py-5 px-8 text-lg">
+      <nav className="justify-between flex items-center bg-teal-900 text-teal-100 gap-4 py-5 px-8 text-lg">
         <Link href="/">
-          <a className="hover:font-semibold">TLN</a>
+          <a className="hover:font-semibold">The Little Nook</a>
         </Link>
         <Link href="/request">
           <a className="hover:font-semibold">Request A Book</a>

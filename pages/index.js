@@ -13,6 +13,10 @@ const query = groq`
   synopsis,
   series -> {title},
   author -> {name},
+  genres[] -> {
+    title,
+    "slug": slug.current
+  },
   coverImage{
      asset ->{url}
    }
@@ -47,11 +51,25 @@ export default function Home({ books }) {
         <div className="grid grid-cols-3 gap-6">
           {books &&
             books.map((book) => (
-              <article key={book.title} className="">
+              <article
+                key={book.title}
+                className="border border-teal-700 p-4 rounded"
+              >
                 <h2 className="font-semibold text-xl">{book.title}</h2>
-                <p className="mb-2">{book.author.name}</p>
+                <p className="mb-1">{book.author.name}</p>
                 <p className="line-clamp-3 mb-2">{book.synopsis}</p>
                 <small>{book?.series?.title}</small>
+
+                <div className="mt-6 flex items-center gap-3">
+                  {book.genres.map((genre, index) => (
+                    <p
+                      key={index}
+                      className="text-sm p-1 rounded-md bg-teal-700 text-teal-100"
+                    >
+                      {genre.title}
+                    </p>
+                  ))}
+                </div>
               </article>
             ))}
         </div>
